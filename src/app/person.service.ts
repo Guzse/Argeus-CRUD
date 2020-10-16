@@ -23,6 +23,10 @@ export class PersonService {
   postPerson(person:IPerson) {
     return this.http.post(this.URL, person);
   }
+
+  putPerson(person:IPerson) {
+    return this.http.put(this.URL, person);
+  }
 }
 export interface Address {
   id: number;

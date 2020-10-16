@@ -10,6 +10,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { PersonTableComponent } from './person-table/person-table.component';
 import { AddPersonComponent } from './add-person/add-person.component';
 import { ViewPersonComponent } from './view-person/view-person.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ViewPersonComponent } from './view-person/view-person.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+	AppRoutingModule,
+	FormsModule,
     HttpClientModule,
     MDBBootstrapModule.forRoot(),
   ],

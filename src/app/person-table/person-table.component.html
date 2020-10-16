@@ -1,18 +1,23 @@
 <table mdbTable>
 	<thead>
-	  <tr>
-		<th scope="col">#</th>
-		<th scope="col">Name</th>
-		<th scope="col">Last Name</th>
-		<th scope="col">Email</th>
-	  </tr>
+		<tr>
+			<th scope="col">#</th>
+			<th scope="col">Name</th>
+			<th scope="col">Last Name</th>
+			<th scope="col">Email</th>
+		</tr>
 	</thead>
 	<tbody>
-	  <tr mdbTableCol *ngFor="let el of persons">
-		<th scope="row">{{el.id}}</th>
-		<td>{{el.name}}</td>
-		<td>{{el.lastName}}</td>
-		<td>{{el.email}}</td>
-	  </tr>
+		<tr mdbTableCol *ngFor="let el of persons" [routerLink]="['person', el.id]">
+			<th scope="row">{{el.id}}</th>
+			<td>{{el.name}}</td>
+			<td>{{el.lastName}}</td>
+			<td>{{el.email}}</td>
+			<td>
+				<a mdbBtn floating="true" size="sm" color="red" (click)="deletePerson(el.id)" mdbWavesEffect>
+					<mdb-icon fas icon="trash" class="white-text"></mdb-icon>
+				</a>
+			</td>
+		</tr>
 	</tbody>
-  </table>
+</table>

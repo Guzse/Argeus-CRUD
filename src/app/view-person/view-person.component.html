@@ -1,1 +1,20 @@
-<p>view-person works!</p>
+<form (submit)="submitForm()">
+	<div class="form-group col-md-6">
+		<br/>
+		<label for="inputName">Name</label>
+		<input mdbInput type="text" class="form-control" id="inputName" placeholder="Name" [(value)]='person.name'>
+	</div>
+	<div class="form-group col-md-6">
+		<label for="inputLastname">Last Name</label>
+		<input mdbInput type="text" class="form-control" id="inputLastname" placeholder="Last name" [(value)]='person.lastName'>
+	</div>
+	<div class="form-group col-md-6">
+		<label for="inputEmail">Email</label>
+		<input mdbInput type="email" class="form-control" id="inputEmail" placeholder="Email" [(value)]='person.email'>
+	</div>
+	<div class="form-group col-md-6">
+		<label for="NationalNumber">National Number</label>
+		<input mdbInput type="text" class="form-control" id="inputNationalNumber" placeholder="National Number" [(value)]='person.nationalNumber'>
+	</div>
+	<button type="submit"  mdbBtn color="primary">Save</button>
+</form>
